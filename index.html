@@ -11,54 +11,41 @@
     
         <form action="https://jsonplaceholder.typicode.com/posts" method="post">
             <fieldset>
-            <label>
-            Наименование <br>
-            <input type="text" name="name">
-            </label>
+            <label>Наименование<br></label>
+            <input type="text" name="name" required>
             <br>
 
-            <label>
-                Категория <br>
-                <input type="text" name="category">
-                </label>
+            <label for="category-field">Категория<br></label>
+                <input type="text" name="category" id="category-field" required>
                 <br>
 
-            <label>
-                Единицы измерения <br>
-                <input type="text" name="units">
-            </label>
+            <label for="units-field">Единицы измерения<br></label>
+                <input type="text" name="units" id="units-field" required>
             <br>
 
-            <label>
-                Дисконт <br>
-                <input type="checkbox" name="discount" value="yes">
-                </label>
-                <label>
-                <input type="text" name="discount" disabled>
-            </label>
+            <label for="discount-field">Дисконт<br></label>
+            <div>
+                <input type="checkbox" aria-label="add-discount">
+                <input type="text" name="discount" id="discount-field" required>
+            </div>
             <br>
 
-            <label>
-                Описание <br>
-            <textarea name="description" cols="20" rows="3"></textarea>
-            </label>
+            <label for="description-field">Описание <br> </label>
+            <textarea name="description" cols="20" rows="3" id="description-field" required>
+            </textarea>
             <br>
 
-            <label>
-                Количество <br>
-                <input type="number" name="count">
-            </label>
+            <label for="count-field">Количество <br></label>
+                <input type="number" name="count" id="count-field" required>
             <br>
 
-            <label>
-                Цена <br>
-                <input type="number" name="price">
-            </label>
-            <br>
+            <label for="price-field">Цена <br></label>
+            <input type="number" name="price" id="price-field" required>
             <br>
             <label>
             <input type="file" name="file">
-        </label>
+            </label>
+        
             </fieldset>
     <button type="submit">Добавить товар</button>
 </form>
